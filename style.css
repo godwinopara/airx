@@ -29,44 +29,58 @@ img {
 	max-width: 100%;
 }
 
+input {
+	width: 100%;
+	display: block;
+	margin-bottom: 2rem;
+	height: 5rem;
+	border: 1px solid black;
+	padding: 0 1rem;
+	border-radius: 0.5rem;
+	outline: none;
+}
+
+select {
+	width: 100%;
+	height: 5rem;
+	padding: 0 1rem;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+}
+
+li,
+ul {
+	list-style: none;
+}
+
+/* ============= mobile view ================= */
+
 h2 {
-	font-size: 3rem;
 	letter-spacing: 0.1rem;
 	margin-bottom: 1.3rem;
 	color: black;
 }
 
 h3 {
-	font-size: 1.9rem;
 	margin-bottom: 1.3rem;
 	color: black;
 }
 
-.hero__btn {
-	background: rgb(35, 175, 35);
-	width: 150px;
-	height: 50px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 2.8rem;
-}
-
-.btn__small {
-	border-radius: 10px;
-}
-
-.container {
-	max-width: 1100px;
-	margin: auto;
-}
+/* ==== HEADER AND HERO ==== */
 
 .nav__container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem 0;
+	position: relative;
+	z-index: 100;
+}
+
+.container {
+	padding: 0 1.8rem;
 }
 
 .nav__wrapper {
@@ -77,6 +91,10 @@ h3 {
 
 .nav__wrapper a {
 	z-index: 50;
+}
+
+.nav__wrapper .nav__book__ride:hover {
+	text-decoration: underline;
 }
 
 .nav__wrapper button {
@@ -94,6 +112,7 @@ h3 {
 	background-image: url("./images/bg-image.webp");
 	background-color: rgba(0, 0, 0, 0.8);
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	min-height: 60rem;
 	color: white;
@@ -120,7 +139,8 @@ h3 {
 }
 
 .hero__wrapper h1 {
-	font-size: 6.4rem;
+	font-size: 5rem;
+	line-height: 1.2;
 	z-index: 10;
 	margin-bottom: 2rem;
 }
@@ -132,33 +152,81 @@ h3 {
 
 .hero__wrapper__para {
 	max-width: 60rem;
+	margin-bottom: 3rem;
+}
+.hero__btn {
+	background: rgb(50, 187, 120);
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2.8rem;
+	font-weight: 600;
+}
+
+/* ==== BOOK A RIDE ==== */
+.book__a__ride__wrapper {
+	min-height: 100vh;
+	overflow: hidden;
+	padding: 5rem 0;
+}
+
+.book__a__ride__content h1 {
+	font-size: 3rem;
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 2rem;
+	color: black;
+}
+
+.book__a__ride__content p {
 	margin-bottom: 2rem;
 }
 
-/* ======= First Section Earn With Air X ====== */
-
-.earn__wrapper {
-	margin: 80px auto;
+.book__ride__btn {
+	background-color: black;
+	color: white;
+	width: 20rem;
+	height: 5rem;
+	margin-top: 2rem;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	font-size: 1.6rem;
+	border-radius: 0.4rem;
+	cursor: pointer;
 }
 
+.book__a__ride__text {
+	margin-bottom: 4rem;
+}
+
+/* ========= EARN WITH AIRX =========== */
+.earn__wrapper {
+	margin: 8rem auto;
+}
 .earn__wrapper h2 {
 	text-align: center;
-	font-size: 4.5rem;
+	font-size: 2.5rem;
 	margin-bottom: 2rem;
+	color: black;
 }
 
 .earn__btn__wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	column-gap: 10px;
-	margin: 20px 0 50px;
+	margin-bottom: 2rem;
+	column-gap: 2rem;
 }
 
 .earn__btn__wrapper button {
-	padding: 15px 40px;
+	padding: 1.2rem 3rem;
 	border-radius: 10px;
 	font-size: 1.6rem;
+
 	outline: none;
 	border: none;
 	cursor: pointer;
@@ -169,47 +237,46 @@ h3 {
 	color: white;
 }
 
-.driver {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: 10rem;
-}
-
 .driver__img__wrapper img {
-	border-radius: 10px;
-}
-
-.driver__content__wrapper h2 {
-	font-size: 3rem;
-	text-align: left;
+	margin-bottom: 4rem;
 }
 
 .driver__content {
 	display: flex;
+	align-items: flex-start;
 	column-gap: 2rem;
 	margin-bottom: 2rem;
 }
 
-.driver__content h3 {
-	margin-bottom: 0.8rem;
+.number {
+	background-color: rgb(50, 187, 120);
+	padding: 0.5rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	font-weight: bold;
+	color: white;
+	font-size: 1.2rem;
 }
 
-/* .driver__content__wrapper {
-	width: 50%;
-} */
+.driver__content h3 {
+	margin-bottom: 0.8rem;
+	color: black;
+	margin-top: 0;
+	line-height: 0.8;
+}
 
-/* ========== SERVICES =========== */
+/* ========== SERVICES ============ */
+.services {
+	margin-bottom: 10rem;
+}
 
 .services__heading {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	flex-direction: column;
 	margin-bottom: 5rem;
-}
-
-.services__list {
-	display: flex;
-	justify-content: space-between;
 }
 
 .services__list h3 {
@@ -222,7 +289,7 @@ h3 {
 	background-color: rgba(6, 26, 55, 0.04);
 	border-radius: 1rem;
 	min-height: 18rem;
-	width: 32%;
+	margin-bottom: 3rem;
 }
 
 .services__item p {
@@ -231,29 +298,21 @@ h3 {
 }
 
 .services__text {
-	width: 65%;
+	width: 60%;
 }
 
 .services__item img {
-	/* margin-left: auto;
-	display: block;
-
-	align-self: flex-end;
-	border: 1px solid black; */
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	max-height: 13rem;
-	max-width: 13rem;
+	max-height: 12rem;
+	max-width: 12rem;
 }
 
-/* ======= FEATURES ======= */
+/* ======== FEATURES ========== */
+
 .features {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	column-gap: 22rem;
-	margin-top: 10rem;
+	margin: 10rem auto;
 }
 
 .features__heading {
@@ -262,59 +321,245 @@ h3 {
 
 .feature__item {
 	display: flex;
+	align-items: flex-start;
 	column-gap: 2rem;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 }
 
-/* ================== BOOK A RIDE PAGE STYLES =================== */
+.feature__item h3 {
+	margin-bottom: 0.8rem;
+	color: black;
+	margin-top: 0;
+	line-height: 0.8;
+}
 
-.book__a__ride__wrapper {
-	background: #000;
-	height: 100vh;
-	overflow: hidden;
+/* ========= FOOTER ========== */
+
+.footer__logo a {
+	font-size: 2.5rem;
+}
+
+.footer__wrapper {
+	background-color: black;
 	color: white;
-	padding: 5rem 0;
+	padding: 10rem 0;
 }
 
-.book__a__ride__content {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: 8rem;
+.footer__links li {
+	margin-bottom: 1rem;
+	font-size: 1.7rem;
+}
+
+.socials {
+	display: flex;
+	column-gap: 3rem;
+	margin-top: 5rem;
+	margin-bottom: 4rem;
+}
+
+.terms {
+	display: flex;
 	align-items: center;
+	column-gap: 3rem;
+	margin-top: 1.5rem;
 }
 
-.book__a__ride__content h1 {
-	font-size: 5rem;
-	font-weight: 900;
-	line-height: 1;
-	margin-bottom: 2rem;
-}
+/* =================================================== */
+/* ================= DESKTOP VIEW =================== */
 
-.book__a__ride__content .img__wrapper {
-	/* border: 1px solid white; */
-}
+@media screen and (min-width: 1024px) {
+	h2 {
+		font-size: 3rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 1.3rem;
+		color: black;
+	}
 
-.book__a__ride__content p {
-	margin-bottom: 2rem;
-}
+	h3 {
+		font-size: 1.9rem;
+		margin-bottom: 1.3rem;
+		color: black;
+	}
 
-.book__a__ride__wrapper img {
-	margin: auto;
-}
+	.container {
+		max-width: 1180px;
+		margin: auto;
+		padding: 0;
+	}
 
-input {
-	width: 100%;
-	display: block;
-	margin-bottom: 2rem;
-	height: 5rem;
-	border: none;
-	padding: 0 1rem;
-	border-radius: 0.5rem;
-	outline: none;
-}
+	.nav__wrapper .nav__book__ride:hover {
+		text-decoration: underline;
+	}
 
-select {
-	width: 100%;
-	height: 5rem;
-	padding: 0 1rem;
+	.hero__wrapper h1 {
+		font-size: 6.4rem;
+	}
+
+	/* ======= First Section Earn With Air X ====== */
+
+	.earn__wrapper {
+		margin: 80px auto;
+	}
+
+	.earn__wrapper h2 {
+		text-align: center;
+		font-size: 4.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.earn__btn__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 10px;
+		margin: 20px 0 50px;
+	}
+
+	.earn__btn__wrapper button {
+		padding: 15px 40px;
+	}
+
+	.driver {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 10rem;
+	}
+
+	.driver__img__wrapper img {
+		border-radius: 10px;
+		margin-bottom: 0;
+	}
+
+	.driver__content__wrapper h2 {
+		font-size: 3rem;
+		text-align: left;
+	}
+
+	.driver__content h3 {
+		margin-bottom: 0.8rem;
+	}
+
+	.driver__content p {
+		max-width: 70%;
+	}
+
+	/* ========== SERVICES =========== */
+
+	.services__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.services__item {
+		width: 32%;
+	}
+
+	/* ======= FEATURES ======= */
+	.features {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 22rem;
+		margin: 10rem auto;
+	}
+
+	/* ================== BOOK A RIDE PAGE STYLES =================== */
+
+	.book__ride__header {
+		background: #000;
+	}
+	.book__a__ride__wrapper {
+		height: 100vh;
+		overflow: hidden;
+		padding: 5rem 0;
+	}
+
+	.book__a__ride__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 8rem;
+		align-items: center;
+	}
+
+	.book__a__ride__content h1 {
+		font-size: 5rem;
+		font-weight: 900;
+		line-height: 1;
+		margin-bottom: 2rem;
+		color: black;
+	}
+
+	.book__a__ride__content .img__wrapper {
+		/* border: 1px solid white; */
+	}
+
+	.book__a__ride__content p {
+		margin-bottom: 2rem;
+	}
+
+	.book__a__ride__wrapper img {
+		margin: auto;
+	}
+
+	.book__ride__btn {
+		background-color: black;
+		color: white;
+		width: 20rem;
+		height: 5rem;
+		margin-top: 2rem;
+		font-weight: 500;
+		outline: none;
+		border: none;
+		font-size: 1.6rem;
+		border-radius: 0.4rem;
+		cursor: pointer;
+	}
+
+	input {
+		width: 100%;
+		display: block;
+		margin-bottom: 2rem;
+		height: 5rem;
+		border: 1px solid black;
+		padding: 0 1rem;
+		border-radius: 0.5rem;
+		outline: none;
+	}
+
+	select {
+		width: 100%;
+		height: 5rem;
+		padding: 0 1rem;
+		background-color: transparent;
+		outline: none;
+		border: 1px solid black;
+		border-radius: 0.5rem;
+	}
+
+	li,
+	ul {
+		list-style: none;
+	}
+
+	/* ========= footer  =============*/
+
+	.footer__logo a {
+		font-size: 2.5rem;
+	}
+
+	.footer__wrapper {
+		background-color: black;
+		color: white;
+		padding: 10rem 0;
+	}
+
+	.footer__content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.footer__links li {
+		margin-bottom: 1rem;
+		font-size: 1.7rem;
+	}
 }
