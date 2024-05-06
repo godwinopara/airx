@@ -79,6 +79,27 @@ ul {
 	transition: opacity 2s ease-in-out;
 }
 
+.input__phone {
+	display: flex;
+}
+
+.input__phone input {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.input__phone label {
+	display: flex;
+	align-items: center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: #4a4a4a;
+	color: white;
+	height: 5rem;
+	padding: 0 8px;
+	margin: 0;
+}
+
 .active {
 	opacity: 1;
 	transition: opacity 2s ease-in-out;

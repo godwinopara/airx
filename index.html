@@ -51,6 +51,17 @@
 							<input type="text" placeholder="Enter Pick Up Point" />
 							<input type="text" placeholder="Enter Drop Off Point" />
 							<input type="text" placeholder="Enter Phone Number" />
+							<div class="input__phone">
+								<label for="phone">+234</label>
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									pattern="[0-9]{10}"
+									title="Phone number must contain exactly 10 digits"
+									required
+								/>
+							</div>
 							<select name="dropdown" id="">
 								<option value="">Select a Ride</option>
 							</select>
@@ -124,47 +135,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- ============= SERVICES =================== -->
-			<section class="services container">
-				<div class="services__heading">
-					<h2>Our Services</h2>
-					<p>
-						Changing how people can request rides and get from point A to point B is just the
-						beginning.
-					</p>
-				</div>
-
-				<div class="services__list">
-					<div class="services__item">
-						<div class="services__text">
-							<h3>Rides</h3>
-							<p>Request in seconds, ride in minutes.</p>
-						</div>
-						<div>
-							<img src="images/airx-car.png" alt="car" />
-						</div>
-					</div>
-					<div class="services__item">
-						<div class="services__text">
-							<h3>Delivery</h3>
-							<p>Your favourite food, delivered fast.</p>
-						</div>
-						<div>
-							<img src="images/delivery.png" alt="food" />
-						</div>
-					</div>
-					<div class="services__item">
-						<div class="services__text">
-							<h3>Groceries</h3>
-							<p>All the essentials whenever you need them.</p>
-						</div>
-						<div>
-							<img src="images/groceries.png" alt="" />
 						</div>
 					</div>
 				</div>
